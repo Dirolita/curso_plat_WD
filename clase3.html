@@ -32,7 +32,6 @@
             display: grid;
             grid-template-rows: auto 1fr auto;
             width: 19rem;
-           
         }
         .logo{
             width:150px;
@@ -40,20 +39,7 @@
             justify-self: center;
             display: none;
         }
-        .title{
-            font-size: var(--lg);
-            margin-bottom: 12px;
-            text-align: center;
-
-        }
-        .subtitle{
-            color: var(--very-ligtht-pink);
-            font-size: var(--md);
-            font-weight: 300;
-            margin-top: 0;
-            text-align: center;
-            margin-bottom: 32px;
-        }
+       
         .form{
             display: flex;
             flex-direction: column;
@@ -81,18 +67,41 @@
             width: 100%;
             font-size: var(--md);
             font-weight: bold;
-        }
-        .login-btn{
-            margin: 14px 0 30px 0;
             align-self: center;
+        }
+        .secundary-button{
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+            height: 60px;
+            width: 100%;
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .singup-button{
+            justify-self: center;
+        }
+        form a{
+            color: var(--hospital-green);
+            font-size: var(--sm);
+            text-align: center;
+            text-decoration: none;
+            margin:50px  50px;
         }
         @media(max-width:700px){
             .logo{
                 display: block;
             }
+            .secundary-button{
+                width: 243px;
+                position: absolute;
+                bottom: 0;
+                
+            }
             .primary-btn{
                 width: 80%;
-                justify-items: center;
+               
             }
         }
 
@@ -103,23 +112,21 @@
     <div class="login">
         <div class="from-container">
             <img src="Platzi_YardSale_Logos/logo_yard_sale.svg" alt="logo" class="logo">
-            <h1 class="title">
-                Create a new password
-            </h1>
-            <p class="subtitle">
-                Enter a new password for you account
-            </p>
+            
             <form action="
             " class="form">
-            <label for="password" class="label">Password</label>
-            <input type="password" name="" id="password" placeholder="********" class="input input-pwd">
+            <label for="email" class="label">Email Address</label>
+            <input type="email" name="" id="email" placeholder="dirola@aprende.com" class="input input-email">
 
             <label for="new-password" class="label">Password</label>
             <input type="password" name="" id="new-password" placeholder="********" class="input input-pwd">
 
-            <input type="submit" value="Confirm" class="primary-btn login-btn">
-            </form>
+            <input type="submit" value="Log in" class="primary-btn login-btn">
 
+            <a href="/">Forgot my password</a>
+
+            </form>
+           <button class="secundary-button singup-button">Sing Up</button>
            
         </div>
     </div>

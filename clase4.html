@@ -34,26 +34,14 @@
             width: 19rem;
            
         }
-        .logo{
-            width:150px;
-            margin-bottom: 48px;
-            justify-self: center;
-            display: none;
-        }
+      
         .title{
             font-size: var(--lg);
             margin-bottom: 12px;
-            text-align: center;
+            text-align: start;
 
         }
-        .subtitle{
-            color: var(--very-ligtht-pink);
-            font-size: var(--md);
-            font-weight: 300;
-            margin-top: 0;
-            text-align: center;
-            margin-bottom: 32px;
-        }
+       
         .form{
             display: flex;
             flex-direction: column;
@@ -61,7 +49,8 @@
         .label{
             font-size: var(--sm);
             font-weight: bold;
-            margin-bottom: 4px;
+            margin: 8px 0px 8px 0px;
+            
         }
         .input{
             background-color: var(--text-input-fiel);
@@ -70,29 +59,32 @@
             height: 30px;
             font-size: var(--md);
             padding: 6px;
-            margin-bottom: 19px;
+            margin: 8px 0px 8px 0px;
         }
         .primary-btn{
             background-color: var(--hospital-green);
             border-radius: 8px;
             border: none;
             color: var(--white);
-            height: 60px;
+            height: 50px;
             width: 100%;
             font-size: var(--md);
             font-weight: bold;
+            
         }
-        .login-btn{
-            margin: 14px 0 30px 0;
+        .login-create{
+            margin: 24px 0 30px 0;
             align-self: center;
         }
         @media(max-width:700px){
             .logo{
                 display: block;
             }
-            .primary-btn{
-                width: 80%;
-                justify-items: center;
+            .login-create{
+                position: absolute;
+                bottom: 0px;
+                width: 304px;
+                
             }
         }
 
@@ -102,22 +94,23 @@
 <body>
     <div class="login">
         <div class="from-container">
-            <img src="Platzi_YardSale_Logos/logo_yard_sale.svg" alt="logo" class="logo">
-            <h1 class="title">
-                Create a new password
-            </h1>
-            <p class="subtitle">
-                Enter a new password for you account
-            </p>
+            
+           
             <form action="
             " class="form">
+            <h1 class="title">
+                My account
+            </h1>
+            <label for="name" class="label">Name</label>
+            <input type="tect" name="" id="name" placeholder="Diana Carolina Serrano" class="input input-name">
+
+            <label for="email" class="label">Email</label>
+            <input type="email" name="" id="email" placeholder="example@example.com" class="input input-email">
+
             <label for="password" class="label">Password</label>
             <input type="password" name="" id="password" placeholder="********" class="input input-pwd">
 
-            <label for="new-password" class="label">Password</label>
-            <input type="password" name="" id="new-password" placeholder="********" class="input input-pwd">
-
-            <input type="submit" value="Confirm" class="primary-btn login-btn">
+            <input type="submit" value="Create" class="primary-btn login-create">
             </form>
 
            
