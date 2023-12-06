@@ -1,6 +1,7 @@
 :root{
     --white:#FFFFFf;
     --black: #000000;
+    --border-ligtht-pink: #bdbbbb;
     --very-ligtht-pink: #858282;
     --text-input-fiel: #F7F7F7;
     --hospital-green: #ACD9B2;
@@ -22,4 +23,7 @@ li {
 a {
   text-decoration: none;
   color: var(--black);
+}
+.inactive{
+  display: none;
 }

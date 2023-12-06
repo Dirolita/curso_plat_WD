@@ -1,0 +1,114 @@
+@import url(./basic.css);
+
+/* ----------------Estilos navbar-----------------*/
+.menu{
+    display: none;
+}
+.logo{
+    width: 150px;
+}
+nav{
+    display:flex ;
+    width: auto;
+    justify-content: space-between;
+    height: 56px;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--border-ligtht-pink);
+}
+.navbar-left{
+    display: flex;
+}
+.navbar-left ul,
+.navbar-right ul{
+    display: flex;
+    align-items: center;
+}
+.navbar-left ul li a{
+    color: var(--very-ligtht-pink);
+    border: 1px solid var(--white);
+    padding: 8px;
+    border-radius: 8px;
+}
+.navbar-left ul a:hover,
+.navbar-right ul a:hover{
+        border: 1px solid var(--hospital-green);
+        color: var(--hospital-green);
+    }
+    .email-nav{
+        color: var(--very-ligtht-pink);
+        margin-right: 10px;
+        display: flex;
+        cursor: pointer;
+    }
+    .navbar-shopping-cart{
+        position:relative;
+    }
+    .email-nav img{
+    margin-left: 10px;
+    transform: rotate(90deg);
+}
+    .navbar-shopping-cart div{
+        width: 12px;
+        height: 12px;
+        background-color: var(--hospital-green);
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 10px;
+        font-weight: bold;
+        position: absolute;
+        right: 0px;
+        top: -4px;
+    }
+    
+    /*--------------Menu de informacion desktop ------------*/
+.desktop-menu{
+    position: absolute;
+    top:56px;
+    right: 60px;
+    background: var(--white);
+    width: 100px;
+    height: auto;
+    border: 1px solid var(--border-ligtht-pink); 
+    border-radius: 0px 0px 6px 6px;
+    padding: 20px 20px 0px 20px;
+}
+.desktop-menu ul{
+        padding: 0;
+        margin: 0;
+    }
+    .desktop-menu ul li{
+        text-align: end;
+    }
+    .desktop-menu ul li:last-child{
+        padding-top: 20px;
+        border-top: 1px solid var(--border-ligtht-pink); 
+    }
+    .desktop-menu ul li:last-child a{
+        color: var( --hospital-green);
+    }
+    .desktop-menu ul li:not(:last-child) {
+            font-weight: bold;
+}
+    .desktop-menu ul li a{
+        color: var( --black);
+        display: inline-block;
+        margin-top: 4px;
+        margin-bottom: 20px;
+    }
+/* Media Queri  Navbar*/
+    @media(max-width: 640px){
+        .menu{
+            display: block;
+        }
+        .logo{
+            width: 120px;
+            margin-left: 15px;
+        }
+        .navbar-left ul{
+            display: none;
+        }
+        .email-nav{
+            display: none;
+        }
+    }
