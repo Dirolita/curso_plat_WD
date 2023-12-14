@@ -96,6 +96,34 @@ nav{
         margin-top: 4px;
         margin-bottom: 20px;
     }
+/*--------------Menu de informacion mobile ------------*/
+.mobile-menu{
+    padding: 12px;
+    position: absolute;
+    top: 56px;
+}
+.mobile-menu ul{
+    padding: 0;
+    margin: 24px 0 0;
+}
+.mobile-menu ul:first-child{
+    border-bottom: 1px solid var( --very-ligtht-pink);
+}
+.mobile-menu ul li{
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.mobile-menu .email{
+    font-size: var(--sm);
+    font-weight: 300;
+}
+.mobile-menu .sing-out{
+    font-size: var(--sm);
+    color: var(--hospital-green);
+}
+.mobile-menu ul:nth-child(3) {
+    margin-top: 20px;
+}
 /* Media Queri  Navbar*/
     @media(max-width: 640px){
         .menu{
@@ -109,6 +137,16 @@ nav{
             display: none;
         }
         .email-nav{
+            display: none;
+        }
+        /* Esta clase sirve para desaparecer el menu en desktop asi este activado cuando la pantalla es max de 640*/
+        .desktop-menu{
+            display: none;
+        }
+    }
+    @media(min-width: 641px){
+         /* Esta clase sirve para desaparecer el menu en mobile asi este activado cuando la pantalla es min de 641*/
+        .mobile-menu{
             display: none;
         }
     }
