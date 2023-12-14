@@ -31,35 +31,35 @@ nav{
 }
 .navbar-left ul a:hover,
 .navbar-right ul a:hover{
-        border: 1px solid var(--hospital-green);
-        color: var(--hospital-green);
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
     }
-    .email-nav{
-        color: var(--very-ligtht-pink);
-        margin-right: 10px;
-        display: flex;
-        cursor: pointer;
-    }
-    .navbar-shopping-cart{
-        position:relative;
-    }
-    .email-nav img{
-    margin-left: 10px;
-    transform: rotate(90deg);
+.email-nav{
+    color: var(--very-ligtht-pink);
+    margin-right: 10px;
+    display: flex;
+    cursor: pointer;
 }
-    .navbar-shopping-cart div{
-        width: 12px;
-        height: 12px;
-        background-color: var(--hospital-green);
-        display: flex;
-        justify-content: center;
-        border-radius: 50%;
-        font-size: 10px;
-        font-weight: bold;
-        position: absolute;
-        right: 0px;
-        top: -4px;
-    }
+.navbar-shopping-cart{
+    position:relative;
+}
+.email-nav img{
+margin-left: 10px;
+transform: rotate(90deg);
+}
+.navbar-shopping-cart div{
+    width: 12px;
+    height: 12px;
+    background-color: var(--hospital-green);
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    right: 0px;
+    top: -4px;
+}
     
     /*--------------Menu de informacion desktop ------------*/
 .desktop-menu{
@@ -124,6 +124,94 @@ nav{
 .mobile-menu ul:nth-child(3) {
     margin-top: 20px;
 }
+/* aside(Product detail)*/
+
+.product-detail{
+    width: 340px;
+    padding: 0px 8px 24px 8px;;
+    position: absolute;
+    right: 0;
+}
+.title{
+font-size: var(--lg);
+margin-left: 10px;
+}
+.title-arrow{
+    display: flex;
+}
+.title-arrow img{
+    transform: rotate(180deg);
+}
+.btn-close img:hover{
+    cursor: pointer;
+}
+.btn-close img{
+    width: 10px;
+    height: 10px;
+}
+.btn-close {
+    margin: 0;
+    background-color: var(--white);
+    padding: 2px;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shooping-card figure img{
+width: 60px;
+height: 60px;
+border-radius: 20px;
+}
+.shooping-card {
+display: grid;
+grid-template-columns: auto 1fr auto auto;
+gap: 16px;
+margin-bottom: 12px;
+justify-content: center;
+align-items: center;
+}
+.shooping-card figure{
+margin: 0;
+}
+.shooping-card p:nth-child(3){
+font-weight: bold;
+}
+.my-order-content{
+display: flex;
+flex-direction: row;
+justify-content:space-between;
+background-color: rgb(235, 233, 233);
+padding: 8px 16px 4px 16px;
+border-radius: 8px;
+margin-bottom: 20px;
+}
+.my-order-content  p:nth-child(1){
+font-weight: bold;
+}
+.total-art{
+color:var(--very-ligtht-pink) ;
+}
+.primary-btn{
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    height: 50px;
+    width: 100%;
+    font-size: var(--md);
+    font-weight: bold;
+}
+.btn-ckout{
+    margin-top: 12px ;
+}
 /* Media Queri  Navbar*/
     @media(max-width: 640px){
         .menu{
@@ -143,9 +231,14 @@ nav{
         .desktop-menu{
             display: none;
         }
+        .product-detail{
+            width: 95%;
+            
+        }
+   
     }
     @media(min-width: 641px){
-         /* Esta clase sirve para desaparecer el menu en mobile asi este activado cuando la pantalla es min de 641*/
+    /* Esta clase sirve para desaparecer el menu en mobile asi este activado cuando la pantalla es min de 641*/
         .mobile-menu{
             display: none;
         }
