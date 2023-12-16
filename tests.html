@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .miHeader{
+            height:100px ;
+            width: 100%;
+            background-color: aqua;
+            display: grid;
+            place-items: center;
+
+        }
+        .title{
+            background-color: azure;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="miHeader">
+        <h1 class="title">Este es un documento de prueba</h1>
+    </header>
+    <nav></nav>
+    <section></section>
+    <footer></footer>
+</body>
+</html>
+<script>
+
+//Le dice que escuche todos los elementos click de mi documento
+document.addEventListener('click', handleMenuClick);
+const header = document.addEventListener('.miHeader');
+const title = header.addEventListener('.title');
+
+//Esta funcion dice que apenas se haga clic en algun lado del documento haga esto: 
+function handleMenuClick(event) {
+
+    //event.target.classList = Captura la clase
+    const targetClassList = event.target.classList;
+    //event.type = Captura el tipo de evento
+    const eventType = event.type;
+    //captura la etiqueta
+    const targetTagName = event.target.tagName;
+    
+    console.log('Clases del elemento:', targetClassList);
+    console.log('Tipo de evento:', eventType);
+    console.log('Etiqueta del elemento:', targetTagName);
+}
+
+
+</script>

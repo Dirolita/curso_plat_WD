@@ -212,7 +212,49 @@ color:var(--very-ligtht-pink) ;
 .btn-ckout{
     margin-top: 12px ;
 }
-/* Media Queri  Navbar*/
+/* Contenido de seccion de los productos*/
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,var(--card-size));
+    gap:26px;
+    place-content: center;
+    margin-top: 20px;
+
+}
+.product-card{
+    width: var(--card-size);
+}
+.img-product{
+    width: 100%;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.product-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-icon-product{
+    width: 35px;
+    height: 35px;
+    margin: 0;
+}
+.card-info p:first-child{
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top:0px;
+    margin-bottom: 4px;
+}
+.card-info p:nth-child(2){
+    margin-top:0;
+    margin-bottom:0;
+    color: var(--very-ligtht-pink);
+    font-size: var(--ms);
+}
+
+
+/* Media Queri */
     @media(max-width: 640px){
         .menu{
             display: block;
@@ -235,7 +277,16 @@ color:var(--very-ligtht-pink) ;
             width: 95%;
             
         }
-   
+        .cards-container{
+            grid-template-columns: repeat(auto-fill,180px);
+        }
+        .product-card{
+            width: 140px;
+        }
+        .img-product{
+            width: 100%;
+            height: 140px;
+        }
     }
     @media(min-width: 641px){
     /* Esta clase sirve para desaparecer el menu en mobile asi este activado cuando la pantalla es min de 641*/
